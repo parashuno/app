@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>4 Basic Prompts Genie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-gradient-start: #020617;
+      --bg-gradient-end: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.4);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --accent-primary: #22d3ee;
+      --accent-hover: #67e8f9;
+      --accent-success: #10b981;
+      --code-bg: rgba(0, 0, 0, 0.3);
+      --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      --input-bg: rgba(15, 23, 42, 0.6);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: fixed linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .input-section {
+      margin-bottom: 40px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+      letter-spacing: 0.05em;
+    }
+
+    textarea {
+      background: var(--input-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      resize: vertical;
+      min-height: 150px;
+      transition: all 0.3s;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.1);
+    }
+
+    .prompt-workflow {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .step-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .step-label {
+      font-weight: 800;
+      font-size: 0.85rem;
+      background: var(--accent-primary);
+      color: #020617;
+      padding: 4px 14px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .prompt-content {
+      background: var(--code-bg);
+      padding: 25px;
+      border-radius: 12px;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      white-space: pre-wrap;
+      border: 1px solid rgba(255,255,255,0.05);
+      margin-bottom: 20px;
+      line-height: 1.5;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    .prompt-content::-webkit-scrollbar { width: 8px; }
+    .prompt-content::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 10px; }
+
+    .copy-btn {
+      background: rgba(34, 211, 238, 0.1);
+      color: var(--accent-primary);
+      border: 1px solid var(--accent-primary);
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s;
+      width: 100%;
+    }
+
+    .copy-btn:hover {
+      background: var(--accent-primary);
+      color: #020617;
+    }
+
+    .copy-btn.copied {
+      background: var(--accent-success);
+      border-color: var(--accent-success);
+      color: white;
+    }
+
+    .footer {
+      margin-top: 80px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--card-border);
+      padding-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>4 Basic Prompts</h1>
+    </header>
+
+    <div class="input-section">
+      <div class="input-group">
+        <label>My Observation</label>
+        <textarea id="obsInput" placeholder="Paste your observation here..." oninput="updatePrompts()"></textarea>
+      </div>
+    </div>
+
+    <div class="prompt-workflow">
+      
+      <!-- Prompt #1 -->
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-label">Prompt #1: Terminology Search</span>
+        </div>
+        <div class="prompt-content" id="p1Display">Loading template...</div>
+        <button class="copy-btn" onclick="copyText('p1Display', this)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+          <span>Copy Prompt #1</span>
+        </button>
+      </div>
+
+      <!-- Prompt #2 -->
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-label">Prompt #2: Terminology Translator</span>
+        </div>
+        <div class="prompt-content" id="p2Display">Loading template...</div>
+        <button class="copy-btn" onclick="copyText('p2Display', this)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+          <span>Copy Prompt #2</span>
+        </button>
+      </div>
+
+      <!-- Prompt #3 -->
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-label">Prompt #3: Execution Strategy</span>
+        </div>
+        <div class="prompt-content" id="p3">আমার মূল দর্শন বা roadmap নিয়ে আমি খুব একটা confused নই।
+আমার challenge হলো execution।
+এতবড় প্রোজেক্ট ও এই প্রোজেক্টের এত এত dimensions আমাকে confuse করছে।
+এখন আমি কোথায় থেকে শুরু করবো, কোনটা করবো ও কোনটা শুরুতেই এখন করবো না, যেটা যেটা করবো সেগুলোর কতটা করাই এখন যথেষ্ট - এই ব্যাপারে আমাকে একটা বিস্তারিত অ্যাকশন প্ল্যান দাও যেটা follow করে আমি নির্দ্বিধায় ও নিশ্চিন্তে প্রোজেক্ট স্টার্ট করতে পারি।</div>
+        <button class="copy-btn" onclick="copyText('p3', this)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+          <span>Copy Prompt #3</span>
+        </button>
+      </div>
+
+      <!-- Prompt #4 -->
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-label">Prompt #4: Trend Sensitivity</span>
+        </div>
+        <div class="prompt-content" id="p4">Mission should not follow trends. Execution may learn from trends.
+trend-sensitive aspects গুলো identify করো ও তাদের একটা বুলেট লিস্ট লিখে দাও।</div>
+        <button class="copy-btn" onclick="copyText('p4', this)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+          <span>Copy Prompt #4</span>
+        </button>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Siva Prasad Mukherjee. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    const p1Template = `আমি যা দেখছি, জ্ঞানজগত সেটাকে কী নামে চেনে?
+আমি যেটা জানতে চাইছি তাহল - “আমি যা intuitively বুঝি, সেটাকে কী নামে ডাকব?"
+
+My Observation:
+[PASTE MY OBSERVATION HERE]`;
+
+    const p2Template = `Observation → Terminology Translator
+
+Purpose
+
+I am an observation-first thinker.
+
+I often notice patterns, principles, problems, opportunities, human behaviors, learning phenomena, workflow issues, business dynamics, educational insights, psychological mechanisms, or strategic ideas before I know their formal names.
+
+Your job is NOT to judge whether I am right or wrong.
+
+Your job is to help me identify:
+
+* The correct terminology
+* The correct mental models
+* The closest academic concepts
+* The closest professional concepts
+* The closest frameworks
+* The closest disciplines
+
+that describe what I am intuitively observing.
+
+---
+
+My Observation
+
+[PASTE MY OBSERVATION HERE]
+
+---
+
+Analysis Instructions
+
+Analyze my observation as if I am trying to discover:
+
+"What is the proper name for what I am seeing?"
+
+Do NOT immediately summarize.
+
+Instead perform the following process.
+
+---
+
+Step 1
+
+Restate my observation clearly.
+
+Explain:
+
+* What I seem to be noticing
+* What pattern I appear to be observing
+* What problem I appear to be identifying
+* What principle I may be describing
+
+---
+
+Step 2
+
+Identify possible terminology.
+
+Create a table:
+
+| Term | Field | Confidence | Explanation |
+
+Include:
+
+* Educational terms
+* Psychological terms
+* Cognitive science terms
+* Business terms
+* Strategy terms
+* Systems-thinking terms
+* Communication terms
+* Learning science terms
+
+when relevant.
+
+---
+
+Step 3
+
+Identify the closest mental models.
+
+Answer:
+
+"What mental model is this observation closest to?"
+
+List:
+
+* Mental model name
+* Explanation
+* Similarities
+* Differences
+
+---
+
+Step 4
+
+Identify the closest frameworks.
+
+Examples:
+
+* Feedback Loop
+* Cognitive Load
+* First Principles Thinking
+* Scaffolding
+* Systems Thinking
+* Capability Building
+* Network Effects
+* Knowledge Management
+
+or any other relevant framework.
+
+Explain why.
+
+---
+
+Step 5
+
+Academic Translation
+
+If a researcher, educator, strategist, psychologist, consultant, or systems thinker heard my observation, how might they describe it?
+
+Provide likely terminology.
+
+---
+
+Step 6
+
+Practical Translation
+
+Explain the observation in plain language.
+
+Answer:
+
+"What am I really saying?"
+
+---
+
+Step 7
+
+Vocabulary Expansion
+
+Provide:
+
+Essential Terms
+
+The most important terminology I should learn.
+
+Related Terms
+
+Concepts closely connected to my observation.
+
+Advanced Terms
+
+Deeper concepts worth exploring later.
+
+---
+
+Step 8
+
+Naming Suggestions
+
+If this observation does not perfectly fit an existing concept:
+
+Suggest:
+
+* Custom terminology
+* Framework names
+* Principle names
+* Model names
+
+that could describe the idea.
+
+---
+
+Step 9
+
+Most Useful Takeaway
+
+Answer:
+
+"If I remember only one term, one framework, and one mental model from this observation, what should they be and why?"
+
+---
+
+Output Philosophy
+
+Assume:
+
+* I am observation-first.
+* I may lack formal terminology.
+* I am trying to improve my thinking vocabulary.
+* I am trying to find the correct mental model.
+* I am trying to connect intuition with established knowledge.
+
+Your primary goal is:
+
+Help me answer:
+
+"What is the proper language for what I am intuitively seeing?"`;
+
+    function updatePrompts() {
+      const observation = document.getElementById('obsInput').value || "[PASTE MY OBSERVATION HERE]";
+      
+      document.getElementById('p1Display').innerText = p1Template.replace('[PASTE MY OBSERVATION HERE]', observation);
+      document.getElementById('p2Display').innerText = p2Template.replace('[PASTE MY OBSERVATION HERE]', observation);
+    }
+
+    function copyText(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const originalContent = btn.innerHTML;
+        btn.innerHTML = `<span>Copied!</span>`;
+        btn.classList.add('copied');
+        
+        setTimeout(() => {
+          btn.innerHTML = originalContent;
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+
+    // Initial setup
+    updatePrompts();
+  </script>
+</body>
+</html>
