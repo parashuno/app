@@ -1,0 +1,913 @@
+
+
+
+
+
+# FlowForge Course K–12 Master (Final Consolidated Version)
+
+## Description
+
+A production-grade Google Flow + Veo 3 framework for creating structured K–12 lesson and chapter videos using sequential 8-second Veo clips, optimized for understanding, retention, progressive learning, lesson mastery, and Flow Add-to-Prompt continuity.
+
+The purpose is to teach a lesson or chapter thoroughly and systematically.
+
+---
+
+# Primary Objective
+
+I want to create a school lesson video based on a curriculum lesson or chapter.
+
+The goal is not merely to introduce a concept.
+
+The goal is not merely to explain a topic.
+
+The goal is to teach the lesson effectively so that learners can:
+
+* Understand
+* Connect ideas
+* Remember
+* Apply basic knowledge
+* Build confidence
+
+---
+
+# Primary Educational Success Metric
+
+The primary success metric is:
+
+"Does this lesson reduce learner confusion and increase understanding?"
+
+Every scene must contribute to:
+
+* Clarity
+* Understanding
+* Retention
+* Confidence
+
+If a scene fails to do so, redesign or remove it.
+
+---
+
+# Learning Context
+
+Grade Level:
+
+[Class 1–2 / Class 3–5 / Class 6–8 / Class 9–10 / Class 11–12]
+
+Curriculum:
+
+[CBSE / ICSE / State Board / NIOS / Other]
+
+Subject:
+
+[Mathematics / Science / Social Science / History / Geography / English / Bengali / Computer Science / Other]
+
+Audience Type:
+
+[Student Self-Learning / Parent-Assisted Learning / Classroom Learning]
+
+---
+
+# Learning Preference
+
+Preferred Learning Mode:
+
+* Visual Learner
+* Auditory Learner
+* Story-Based Learner
+* Example-Driven Learner
+* Mixed Learning
+
+### Adaptation Rules
+
+If Visual Learner:
+
+* Use diagrams extensively
+* Use visual explanations
+* Use visual comparisons
+
+If Auditory Learner:
+
+* Reinforce through narration
+* Repeat important ideas naturally
+
+If Story-Based Learner:
+
+* Use narrative flow
+* Use relatable situations
+
+If Example-Driven Learner:
+
+* Use practical examples frequently
+* Reinforce through application
+
+If Mixed:
+
+Balance all learning methods.
+
+---
+
+# Assessment Focus
+
+Select one:
+
+* Concept Understanding
+* School Examination
+* Competitive Examination Foundation
+* Mixed
+
+### Adaptation Rules
+
+If Concept Understanding:
+
+Prioritize:
+
+* Clarity
+* Intuition
+* Understanding
+
+---
+
+If School Examination:
+
+Prioritize:
+
+* Definitions
+* Key points
+* Frequently tested concepts
+* Revision-friendly structure
+
+---
+
+If Competitive Examination Foundation:
+
+Prioritize:
+
+* Concept depth
+* Analytical understanding
+* Strong foundations
+
+Avoid rote learning.
+
+---
+
+If Mixed:
+
+Balance:
+
+* Understanding
+* Retention
+* Application
+* Exam readiness
+
+---
+
+# Lesson Information
+
+Chapter Name:
+
+[PASTE CHAPTER NAME]
+
+Lesson Topic:
+
+[PASTE LESSON TOPIC]
+
+Learning Goal:
+
+[WHAT SHOULD THE LEARNER KNOW AFTER THIS LESSON?]
+
+---
+
+# Production Environment
+
+I will create this lesson using Google Flow and Veo 3.
+
+Each scene must be designed as a single 8-second Veo clip.
+
+The final lesson will be assembled through Flow's Add-to-Prompt workflow.
+
+All scenes must feel like one continuous lesson.
+
+---
+
+# Course Philosophy
+
+This is a LESSON video.
+
+Do NOT create:
+
+* A simple concept explainer
+* A revision-only session
+* A practice-only session
+
+Focus on:
+
+Understand
+↓
+Learn
+↓
+Connect
+↓
+Remember
+
+Outcome:
+
+Lesson Mastery
+
+---
+
+# Knowledge Scaffolding Rule
+
+Build learning progressively.
+
+Always move from:
+
+Known
+↓
+Simple
+↓
+Related
+↓
+Complex
+
+Never introduce advanced concepts before foundations.
+
+---
+
+# Confusion-First Teaching Rule
+
+Do not organize the lesson around information.
+
+Organize the lesson around learner confusion.
+
+For every major concept:
+
+Identify:
+
+* What learners misunderstand
+* Why they misunderstand it
+* What explanation removes the misunderstanding
+
+Design learning around resolving confusion.
+
+---
+
+# One Scene = One Learning Outcome Rule
+
+Each scene should teach one specific piece of knowledge.
+
+Avoid:
+
+* Multiple major concepts
+* Overloaded scenes
+* Dense information
+
+Each scene should produce one clear learning gain.
+
+---
+
+# Parent-Assisted Learning Rule
+
+If Audience Type = Parent-Assisted Learning:
+
+Include:
+
+* Parent-friendly explanations
+* Likely learner confusion points
+* Reinforcement ideas for parents
+
+---
+
+# Age-Appropriate Teaching Rule
+
+Adapt:
+
+* Vocabulary
+* Examples
+* Analogies
+* Visual complexity
+* Teaching depth
+
+to the selected grade level.
+
+
+## Section 2 — Lesson Blueprint & Scene Generation System
+
+---
+
+# Before Creating Any Scene
+
+Generate the following first.
+
+Do not skip.
+
+---
+
+## Chapter Overview
+
+Explain:
+
+* What the chapter teaches
+* Why it matters
+* How it connects to previous learning
+
+Keep age appropriate.
+
+---
+
+## Learning Outcomes
+
+List:
+
+### Primary Outcomes
+
+### Secondary Outcomes
+
+Specify exactly what learners should know after completing the lesson.
+
+---
+
+## Prerequisite Knowledge
+
+Identify:
+
+What learners should already understand before beginning this lesson.
+
+List:
+
+* Required knowledge
+* Helpful prior knowledge
+
+---
+
+## Knowledge Roadmap
+
+Display:
+
+Starting Knowledge
+↓
+Concept A
+↓
+Concept B
+↓
+Concept C
+↓
+Lesson Understanding
+↓
+Lesson Mastery
+
+The roadmap should reflect the natural learning progression.
+
+---
+
+## Common Student Difficulties
+
+Predict:
+
+* Misconceptions
+* Confusing concepts
+* Frequently misunderstood points
+
+For each difficulty explain:
+
+* Why it occurs
+* What misunderstanding exists
+
+Important:
+
+These are predicted difficulties, not confirmed learner feedback.
+
+---
+
+## Real-Life Relevance
+
+Explain:
+
+* Why learners should care
+* Where they encounter the knowledge
+* Practical usefulness
+
+Answer:
+
+"Why does this lesson matter?"
+
+---
+
+## Global Visual Identity
+
+Define:
+
+* Educational visual style
+* Motion style
+* Rendering quality
+* Design language
+* Educational atmosphere
+
+Maintain consistency throughout the lesson.
+
+---
+
+## Global Learning Style
+
+Define:
+
+* Teaching style
+* Explanation style
+* Example style
+* Reinforcement style
+
+Maintain consistency throughout the lesson.
+
+---
+
+# Generate Two Complete Versions
+
+---
+
+## Variation 1
+
+Teacher-Led Lesson
+
+Requirements:
+
+* Female presenter
+* Bengali (India)
+* Friendly teacher personality
+* Strong instructional delivery
+* Direct learner engagement
+
+---
+
+## Variation 2
+
+Visual Learning Lesson
+
+Requirements:
+
+* No presenter
+* Visual-first teaching
+* Educational storytelling
+* Motion graphics
+* Concept visualization
+* Bengali narration
+
+---
+
+# Recommended Lesson Teaching Sequence
+
+Use whenever appropriate:
+
+1. Hook
+2. Learning Objective
+3. Foundation Concept
+4. Concept Expansion
+5. Relationships Between Concepts
+6. Example
+7. Real-Life Application
+8. Common Misunderstanding
+9. Reinforcement
+10. Lesson Summary
+
+---
+
+# Reinforcement Rule
+
+Every major concept must be reinforced using at least one of:
+
+* Example
+* Analogy
+* Comparison
+* Visualization
+* Real-life connection
+
+Never introduce a major concept without reinforcement.
+
+---
+
+# Confidence Building Rule
+
+Every major concept should increase learner confidence.
+
+Learners should repeatedly feel:
+
+"I understand this now."
+
+Avoid:
+
+* Making concepts appear more difficult than necessary
+* Unnecessary complexity
+* Intimidating explanations
+
+Prefer:
+
+* Clarity
+* Simplicity
+* Progress
+
+---
+
+# Memory Retention Rule
+
+Create memory anchors whenever possible.
+
+Use:
+
+* Visual associations
+* Analogies
+* Patterns
+* Cause-and-effect relationships
+* Real-life references
+
+The learner should remember the lesson later.
+
+---
+
+# Scene Structure Requirements
+
+For EACH scene provide:
+
+---
+
+## Scene Number
+
+---
+
+## Learning Outcome
+
+What specific knowledge should learners gain from this scene?
+
+---
+
+## Knowledge Type
+
+Specify:
+
+* Definition
+* Principle
+* Fact
+* Mechanism
+* Relationship
+* Example
+* Application
+* Reinforcement
+
+---
+
+## Confusion Addressed
+
+Identify:
+
+* Likely learner misunderstanding
+* Root cause of confusion
+* How this scene resolves it
+
+---
+
+## Duration
+
+Exactly 8 seconds
+
+---
+
+## Visual Direction
+
+Describe:
+
+* Educational visuals
+* Diagrams
+* Learning graphics
+* Demonstrations
+* Concept visualizations
+
+---
+
+## Camera Movement
+
+Specify:
+
+* Static
+* Push-In
+* Tracking
+* Orbit
+* Educational focus movement
+
+Use only when helpful.
+
+---
+
+## Presenter Action
+
+(Variation 1 only)
+
+Describe:
+
+* Teaching gestures
+* Eye contact
+* Interaction with learning aids
+* Demonstration behavior
+
+---
+
+## Bengali Narration
+
+Requirements:
+
+* Natural Bengali (India)
+* Teacher-friendly
+* Age appropriate
+
+Target:
+
+15–25 Bengali words maximum.
+
+---
+
+## On-Screen Learning Elements
+
+Include:
+
+* Keywords
+* Definitions
+* Labels
+* Learning cues
+
+Keep concise.
+
+---
+
+## Reinforcement Method
+
+Specify:
+
+* Example
+* Analogy
+* Comparison
+* Visualization
+* Real-life application
+
+---
+
+## Memory Anchor
+
+Specify:
+
+What should help learners remember this knowledge later?
+
+---
+
+## Veo 3 Generation Prompt
+
+Write a fully optimized Veo 3 prompt.
+
+Requirements:
+
+* Entirely in English
+* Ready for Google Flow
+* Narration may remain Bengali
+* Maintain continuity with previous scenes
+
+---
+
+## Transition to Next Scene
+
+Describe:
+
+How learning naturally progresses.
+
+---
+
+## Continuity Notes
+
+Maintain:
+
+* Visual consistency
+* Learning consistency
+* Motion consistency
+* Presenter consistency
+
+throughout the lesson.
+
+
+## Section 3 — Output Structure, Quality Standards & Production Rules
+
+---
+
+# Lesson Summary Rule
+
+At the end of the lesson provide:
+
+---
+
+## Chapter Recap
+
+Summarize:
+
+* What the lesson taught
+* How the concepts connect
+* Why the lesson matters
+
+Use age-appropriate language.
+
+---
+
+## Key Learnings
+
+List:
+
+* Most important concepts
+* Most important relationships
+* Most important memory anchors
+
+Keep only essential takeaways.
+
+---
+
+## Lesson Mastery Check
+
+Create:
+
+3 simple understanding questions.
+
+Purpose:
+
+* Check comprehension
+* Reinforce learning
+* Encourage recall
+
+Do NOT make them difficult.
+
+Do NOT turn this into an exam.
+
+Do not provide answers immediately.
+
+---
+
+# Flow Add-to-Prompt Continuity Rules
+
+Assume every scene begins immediately after the previous scene ends.
+
+Maintain:
+
+* Visual continuity
+* Educational continuity
+* Motion continuity
+* Narration continuity
+* Presenter continuity (if applicable)
+
+Avoid:
+
+* Hard resets
+* Style changes
+* Environment changes
+* Unnecessary reintroductions
+
+---
+
+# Educational Effectiveness Rule
+
+Every scene must contribute to at least one of:
+
+* Understanding
+* Retention
+* Confidence
+* Lesson Progression
+
+If a scene contributes to none of these:
+
+Redesign or remove it.
+
+---
+
+# Cognitive Load Rule
+
+Keep information manageable.
+
+Avoid:
+
+* Too many concepts in one scene
+* Dense terminology
+* Long explanations
+* Excessive visual complexity
+
+Each scene should remain comfortably understandable within 8 seconds.
+
+---
+
+# Knowledge Progression Rule
+
+The lesson must feel progressive.
+
+Learners should feel:
+
+"I understand this step."
+
+before moving to the next step.
+
+Never force learners to make large conceptual jumps.
+
+---
+
+# Educational Quality Standards
+
+Target:
+
+* Lesson Understanding
+* Reduced Confusion
+* Strong Retention
+* Confidence Building
+* Parent-Friendly Learning
+* Age-Appropriate Learning
+* Lesson Mastery
+
+---
+
+# Negative Instructions
+
+Avoid:
+
+* Information dumping
+* Chapter summarization without teaching
+* Exam cramming
+* Multiple major concepts in one scene
+* Excessive jargon
+* Weak reinforcement
+* Visual clutter
+* Confusing analogies
+* Abrupt transitions
+* Entertainment without learning value
+
+---
+
+# Final Output Structure
+
+Generate content in the following order:
+
+1. Chapter Overview
+
+2. Learning Outcomes
+
+3. Prerequisite Knowledge
+
+4. Knowledge Roadmap
+
+5. Common Student Difficulties
+
+6. Real-Life Relevance
+
+7. Global Visual Identity
+
+8. Global Learning Style
+
+9. Variation 1 Complete Lesson Breakdown
+
+10. Variation 2 Complete Lesson Breakdown
+
+11. Chapter Recap
+
+12. Key Learnings
+
+13. Lesson Mastery Check
+
+14. Flow Continuity Master Notes
+
+15. Final Veo 3 Production Notes
+
+---
+
+# Final Production Notes
+
+Optimize everything for:
+
+* K–12 learners
+* Parent-assisted learning
+* Lesson mastery
+* Long-term retention
+* Visual learning
+* Bengali educational delivery
+* Google Flow
+* Veo 3
+* Add-to-Prompt workflow
+
+---
+
+# Output Philosophy
+
+The goal is not to impress learners.
+
+The goal is not to maximize information.
+
+The goal is not to complete the syllabus quickly.
+
+The goal is:
+
+Reduce confusion.
+
+Build understanding.
+
+Strengthen retention.
+
+Create confidence.
+
+Support meaningful learning.
+
+Every scene must earn its place by helping learners understand the lesson more clearly than before.

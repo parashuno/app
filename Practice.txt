@@ -1,0 +1,932 @@
+
+
+
+
+# FlowForge Practice K–12 Master (Final Consolidated Version)
+
+## Description
+
+A production-grade Google Flow + Veo 3 framework for creating K–12 practice, application, worksheet, revision, problem-solving and exam-readiness videos using sequential 8-second Veo clips.
+
+The purpose is to help learners successfully apply what they have already learned.
+
+---
+
+# Primary Objective
+
+I want to create a practice-oriented learning video.
+
+The goal is not to introduce a concept.
+
+The goal is not to teach a chapter from scratch.
+
+The goal is to help learners:
+
+* Apply knowledge
+* Solve problems
+* Avoid mistakes
+* Build confidence
+* Strengthen retention
+
+---
+
+# Primary Educational Success Metric
+
+The primary success metric is:
+
+"Can learners successfully apply what they know?"
+
+Every scene should move learners closer to successful performance.
+
+If a scene does not improve capability, redesign or remove it.
+
+---
+
+# Learning Context
+
+Grade Level:
+
+[Class 1–2 / Class 3–5 / Class 6–8 / Class 9–10 / Class 11–12]
+
+Curriculum:
+
+[CBSE / ICSE / State Board / NIOS / Other]
+
+Subject:
+
+[Mathematics / Science / Social Science / History / Geography / English / Bengali / Computer Science / Other]
+
+Audience Type:
+
+[Student Self-Learning / Parent-Assisted Learning / Classroom Learning]
+
+---
+
+# Learning Preference
+
+Preferred Learning Mode:
+
+* Visual Learner
+* Auditory Learner
+* Story-Based Learner
+* Example-Driven Learner
+* Mixed Learning
+
+### Adaptation Rules
+
+If Visual Learner:
+
+* Show solving visually
+* Highlight clues visually
+* Use step-by-step demonstrations
+
+If Auditory Learner:
+
+* Reinforce steps verbally
+* Use verbal reasoning
+
+If Story-Based Learner:
+
+* Use practical scenarios
+* Use problem-based narratives
+
+If Example-Driven Learner:
+
+* Provide many examples
+* Reinforce through worked applications
+
+If Mixed:
+
+Balance all methods.
+
+---
+
+# Assessment Focus
+
+Select one:
+
+* Concept Understanding
+* School Examination
+* Competitive Examination Foundation
+* Mixed
+
+### Adaptation Rules
+
+If Concept Understanding:
+
+Focus on:
+
+* Understanding application
+* Reasoning
+
+---
+
+If School Examination:
+
+Focus on:
+
+* Common school questions
+* Marks-oriented accuracy
+* Frequently tested patterns
+
+---
+
+If Competitive Examination Foundation:
+
+Focus on:
+
+* Analytical thinking
+* Concept application
+* Problem-solving strategy
+
+---
+
+If Mixed:
+
+Balance:
+
+* Understanding
+* Accuracy
+* Application
+* Examination readiness
+
+---
+
+# Practice Information
+
+Chapter:
+
+[PASTE CHAPTER NAME]
+
+Concept:
+
+[PASTE CONCEPT]
+
+Practice Goal:
+
+[WHAT SHOULD LEARNERS BE ABLE TO DO AFTER PRACTICE?]
+
+---
+
+# Production Environment
+
+I will create this video using Google Flow and Veo 3.
+
+Each scene must be designed as a single 8-second Veo clip.
+
+The final practice session will be assembled using Flow's Add-to-Prompt workflow.
+
+All scenes must feel like one continuous guided practice experience.
+
+---
+
+# Practice Philosophy
+
+This is a PRACTICE SESSION.
+
+Do NOT:
+
+* Teach the entire lesson again
+* Create a concept explainer
+* Deliver information without application
+
+Focus on:
+
+Recall
+↓
+Apply
+↓
+Practice
+↓
+Correct
+↓
+Improve
+
+Outcome:
+
+Capability Building
+
+---
+
+# Mistake-Reduction Rule
+
+The goal of practice is not repetition.
+
+The goal is to eliminate confusion that causes mistakes.
+
+Every practice step should:
+
+* Reveal common mistakes
+* Explain why mistakes occur
+* Help learners avoid errors
+
+Practice should build accuracy through understanding.
+
+---
+
+# One Scene = One Solvable Step Rule
+
+Each scene should help learners complete one action.
+
+Examples:
+
+* Observe
+* Recall
+* Identify
+* Apply
+* Solve
+* Verify
+
+Avoid combining multiple major solving steps in one scene.
+
+---
+
+# Confidence Building Rule
+
+Practice should increase confidence.
+
+Learners should repeatedly feel:
+
+"I can do this."
+
+Avoid:
+
+* Intimidation
+* Excessive difficulty
+* Sudden complexity
+
+Build confidence progressively.
+
+---
+
+# Parent-Assisted Learning Rule
+
+If Audience Type = Parent-Assisted Learning:
+
+Include:
+
+* Parent guidance
+* Common learner mistakes
+* Ways parents can support practice
+
+---
+
+# Age-Appropriate Practice Rule
+
+Adapt:
+
+* Question complexity
+* Vocabulary
+* Practice depth
+* Reasoning level
+
+to the selected grade level.
+
+
+## Section 2 — Practice Blueprint & Capability Building System
+
+---
+
+# Before Creating Any Scene
+
+Generate the following first.
+
+Do not skip.
+
+---
+
+## Practice Overview
+
+Explain:
+
+* What learners will practice
+* Why the practice matters
+* What capability will be developed
+
+Keep age appropriate.
+
+---
+
+## Practice Outcomes
+
+Define:
+
+What learners should be able to DO after completing this practice session?
+
+List:
+
+### Primary Capabilities
+
+### Secondary Capabilities
+
+Use action-based outcomes.
+
+Examples:
+
+* Solve
+* Identify
+* Classify
+* Compare
+* Calculate
+* Explain
+* Apply
+
+---
+
+## Required Prior Knowledge
+
+Identify:
+
+What learners must already know before beginning this practice?
+
+List:
+
+* Required knowledge
+* Helpful supporting knowledge
+
+---
+
+## Practice Progression Roadmap
+
+Display:
+
+Recall
+↓
+Recognition
+↓
+Application
+↓
+Guided Practice
+↓
+Independent Thinking
+↓
+Capability
+
+Build progressively.
+
+---
+
+## Common Mistakes Analysis
+
+Predict:
+
+* Frequent mistakes
+* Misconceptions
+* Error patterns
+
+For each mistake explain:
+
+* Why it occurs
+* What misunderstanding causes it
+* How to avoid it
+
+Important:
+
+These are predicted mistakes, not confirmed learner feedback.
+
+---
+
+## Success Criteria
+
+Define:
+
+How learners know they succeeded.
+
+Examples:
+
+* Correct answer
+* Correct reasoning
+* Correct process
+* Correct identification
+
+---
+
+## Global Visual Identity
+
+Define:
+
+* Educational visual style
+* Practice environment
+* Motion style
+* Learning atmosphere
+
+Maintain consistency throughout the practice session.
+
+---
+
+## Global Practice Style
+
+Define:
+
+* Guided practice style
+* Problem-solving style
+* Feedback style
+* Correction style
+
+Maintain consistency throughout.
+
+---
+
+# Generate Two Complete Versions
+
+---
+
+## Variation 1
+
+Teacher-Led Guided Practice
+
+Requirements:
+
+* Female presenter
+* Bengali (India)
+* Coaching style
+* Encouraging feedback
+* Guided participation
+
+---
+
+## Variation 2
+
+Interactive Visual Practice
+
+Requirements:
+
+* No presenter
+* Visual-first problem solving
+* Educational motion graphics
+* Interactive thinking prompts
+* Bengali narration
+
+---
+
+# Active Thinking Rule
+
+Learners should think before being shown answers.
+
+Whenever possible:
+
+Ask
+↓
+Pause
+↓
+Think
+↓
+Reveal
+
+Avoid immediate answer delivery.
+
+---
+
+# Problem-Solving Progression Rule
+
+Use whenever appropriate:
+
+1. Observe
+2. Recall
+3. Identify
+4. Apply
+5. Verify
+6. Correct
+7. Reinforce
+
+---
+
+# Self-Correction Rule
+
+Allow learners to discover and correct mistakes.
+
+Whenever possible:
+
+Mistake
+↓
+Recognition
+↓
+Correction
+↓
+Understanding
+
+Self-correction improves retention.
+
+---
+
+# Verification Rule
+
+Every important action should be verified.
+
+Examples:
+
+* Check the answer
+* Check the process
+* Check the reasoning
+
+Verification builds accuracy.
+
+---
+
+# Reinforcement Rule
+
+Every major practice skill should be reinforced using:
+
+* Additional example
+* Comparison
+* Common mistake
+* Alternative approach
+
+Never assume one successful attempt creates mastery.
+
+---
+
+# Scene Structure Requirements
+
+For EACH scene provide:
+
+---
+
+## Scene Number
+
+---
+
+## Capability Outcome
+
+What should learners be able to do after this scene?
+
+---
+
+## Practice Type
+
+Specify:
+
+* Recall
+* Recognition
+* Identification
+* Application
+* Problem Solving
+* Verification
+* Error Correction
+* Reinforcement
+
+---
+
+## Confusion or Mistake Addressed
+
+Identify:
+
+* Likely learner mistake
+* Why it occurs
+* How this scene prevents or corrects it
+
+---
+
+## Duration
+
+Exactly 8 seconds
+
+---
+
+## Visual Direction
+
+Describe:
+
+* Problem visuals
+* Solution visuals
+* Diagrams
+* Educational graphics
+* Step-by-step guidance
+
+---
+
+## Camera Movement
+
+Specify:
+
+* Static
+* Push-In
+* Tracking
+* Focus movement
+
+Only when helpful.
+
+---
+
+## Presenter Action
+
+(Variation 1 only)
+
+Describe:
+
+* Coaching behavior
+* Guidance gestures
+* Encouragement
+* Demonstration actions
+
+---
+
+## Bengali Narration
+
+Requirements:
+
+* Natural Bengali (India)
+* Encouraging tone
+* Age appropriate
+
+Target:
+
+15–25 Bengali words maximum.
+
+---
+
+## On-Screen Learning Elements
+
+Include:
+
+* Questions
+* Prompts
+* Hints
+* Key steps
+* Visual cues
+
+Keep concise.
+
+---
+
+## Verification Method
+
+Specify:
+
+How learners check correctness.
+
+---
+
+## Reinforcement Method
+
+Specify:
+
+* Example
+* Additional practice
+* Comparison
+* Common mistake
+* Alternative solution
+
+---
+
+## Veo 3 Generation Prompt
+
+Write a fully optimized Veo 3 prompt.
+
+Requirements:
+
+* Entirely in English
+* Ready for Google Flow
+* Narration may remain Bengali
+* Maintain continuity with previous scenes
+
+---
+
+## Transition to Next Scene
+
+Describe:
+
+How practice progresses naturally.
+
+---
+
+## Continuity Notes
+
+Maintain:
+
+* Visual consistency
+* Practice consistency
+* Motion consistency
+* Presenter consistency
+
+throughout the session.
+
+
+## Section 3 — Output Structure, Quality Standards & Production Rules
+
+---
+
+# Practice Summary Rule
+
+At the end of the practice session provide:
+
+---
+
+## Practice Recap
+
+Summarize:
+
+* What was practiced
+* What skills were developed
+* What mistakes were addressed
+
+Use age-appropriate language.
+
+---
+
+## Capability Summary
+
+List:
+
+* What learners can now do
+* What learners can now identify
+* What learners can now apply
+
+Focus on capability rather than information.
+
+---
+
+## Capability Check
+
+Create:
+
+3 simple application-based questions.
+
+Purpose:
+
+* Verify capability
+* Reinforce performance
+* Encourage independent thinking
+
+Do NOT make them difficult.
+
+Do NOT turn this into an exam.
+
+Do not provide answers immediately.
+
+---
+
+# Flow Add-to-Prompt Continuity Rules
+
+Assume every scene begins immediately after the previous scene ends.
+
+Maintain:
+
+* Visual continuity
+* Practice continuity
+* Motion continuity
+* Narration continuity
+* Presenter continuity (if applicable)
+
+Avoid:
+
+* Hard resets
+* Environment changes
+* Style changes
+* Re-explaining previously mastered steps
+
+---
+
+# Educational Effectiveness Rule
+
+Every scene must contribute to at least one of:
+
+* Capability Building
+* Accuracy Improvement
+* Mistake Reduction
+* Confidence Building
+
+If a scene contributes to none of these:
+
+Redesign or remove it.
+
+---
+
+# Cognitive Load Rule
+
+Keep tasks manageable.
+
+Avoid:
+
+* Multiple difficult steps in one scene
+* Excessive information
+* Long instructions
+* Complex visual overload
+
+Each scene should remain comfortably understandable within 8 seconds.
+
+---
+
+# Progressive Difficulty Rule
+
+Build difficulty gradually.
+
+Use:
+
+Easy
+↓
+Moderate
+↓
+Application
+↓
+Independent Thinking
+
+Avoid sudden jumps in complexity.
+
+---
+
+# Educational Quality Standards
+
+Target:
+
+* Capability Building
+* Reduced Mistakes
+* Increased Accuracy
+* Confidence Building
+* Strong Retention
+* Parent-Friendly Practice
+* Age-Appropriate Difficulty
+
+---
+
+# Negative Instructions
+
+Avoid:
+
+* Re-teaching the entire lesson
+* Information dumping
+* Overly difficult questions
+* Excessive difficulty spikes
+* Weak reinforcement
+* Visual clutter
+* Confusing instructions
+* Practice without feedback
+* Entertainment without learning value
+
+---
+
+# Final Output Structure
+
+Generate content in the following order:
+
+1. Practice Overview
+
+2. Practice Outcomes
+
+3. Required Prior Knowledge
+
+4. Practice Progression Roadmap
+
+5. Common Mistakes Analysis
+
+6. Success Criteria
+
+7. Global Visual Identity
+
+8. Global Practice Style
+
+9. Variation 1 Complete Practice Breakdown
+
+10. Variation 2 Complete Practice Breakdown
+
+11. Practice Recap
+
+12. Capability Summary
+
+13. Capability Check
+
+14. Flow Continuity Master Notes
+
+15. Final Veo 3 Production Notes
+
+---
+
+# Final Production Notes
+
+Optimize everything for:
+
+* K–12 learners
+* Parent-assisted learning
+* Capability building
+* Practice effectiveness
+* Error reduction
+* Confidence development
+* Visual learning
+* Bengali educational delivery
+* Google Flow
+* Veo 3
+* Add-to-Prompt workflow
+
+---
+
+# Output Philosophy
+
+The goal is not to test learners.
+
+The goal is not to challenge learners unnecessarily.
+
+The goal is not to create difficult questions.
+
+The goal is:
+
+Build capability.
+
+Reduce mistakes.
+
+Increase accuracy.
+
+Create confidence.
+
+Support successful performance.
+
+Every scene must earn its place by helping learners do something more successfully than before.
