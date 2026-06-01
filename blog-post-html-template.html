@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Post HTML Genie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-gradient-start: #020617;
+      --bg-gradient-end: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.4);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --accent-primary: #22d3ee;
+      --accent-hover: #67e8f9;
+      --accent-success: #10b981;
+      --code-bg: rgba(0, 0, 0, 0.3);
+      --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: fixed linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .sub-header {
+      color: var(--accent-primary);
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .prompt-workflow {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .step-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .step-label {
+      font-weight: 800;
+      font-size: 0.9rem;
+      background: var(--accent-primary);
+      color: #020617;
+      padding: 6px 16px;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .prompt-content {
+      background: var(--code-bg);
+      padding: 30px;
+      border-radius: 16px;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      white-space: pre-wrap;
+      border: 1px solid rgba(255,255,255,0.05);
+      margin-bottom: 25px;
+      line-height: 1.5;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+
+    .prompt-content::-webkit-scrollbar {
+      width: 8px;
+    }
+    .prompt-content::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+
+    .copy-btn {
+      background: rgba(34, 211, 238, 0.1);
+      color: var(--accent-primary);
+      border: 1px solid var(--accent-primary);
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .copy-btn:hover {
+      background: var(--accent-primary);
+      color: #020617;
+      transform: translateY(-2px);
+    }
+
+    .copy-btn.copied {
+      background: var(--accent-success);
+      border-color: var(--accent-success);
+      color: white;
+    }
+
+    .footer {
+      margin-top: 100px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--card-border);
+      padding-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .step-card { padding: 25px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Blog Post HTML</h1>
+      <p class="sub-header">Premium Blogger Content Structure</p>
+    </header>
+
+    <div class="prompt-workflow">
+      
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-label">HTML Prompt Template</span>
+        </div>
+        <div class="prompt-content" id="mainPrompt">&lt;div class="separator" style="clear: both;"&gt;&lt;a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQzkokqsFW9YMXsnwhJ8t6-vzt-58F-3f30vIiDM7djtU2CarnxhUDJ8K5bwVbizCroA5CL9SaJ0cirhyxJvHJkmfjqljumu0vLRCvI_intedMcJXE51lcjI2zl8u4V6Ek82EvWXEOtaNMUNWcPm8E6vD5M3LZ3qfQY2T5MU278LpLVlgyf5zXGwQhxA/s640/kibhabe-valo-chhatra-habo.webp" style="display: block; padding: 1em 0px; text-align: center;"&gt;&lt;img border="0" data-original-height="480" data-original-width="720" height="427" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQzkokqsFW9YMXsnwhJ8t6-vzt-58F-3f30vIiDM7djtU2CarnxhUDJ8K5bwVbizCroA5CL9SaJ0cirhyxJvHJkmfjqljumu0vLRCvI_intedMcJXE51lcjI2zl8u4V6Ek82EvWXEOtaNMUNWcPm8E6vD5M3LZ3qfQY2T5MU278LpLVlgyf5zXGwQhxA/w640-h427/kibhabe-valo-chhatra-habo.webp" width="720" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;sub-title&lt;/p&gt;
+&lt;details id="post-toc-wrapper" open=""&gt;
+  &lt;summary&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/summary&gt;
+  &lt;div id="post-toc"&gt;&lt;/div&gt;
+&lt;/details&gt;
+&lt;div style="padding-bottom: 15px;"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;p&gt;ভালো ছাত্র বা ছাত্রী হতে চান?&lt;/p&gt;
+&lt;p&gt;অবশ্যই হতে পারবেন।&lt;/p&gt;
+&lt;p&gt;ভালো ছাত্র বা ছাত্রী হয়ে ওঠা খুবই সোজা একটা ব্যাপার, যদি ছোট্টো কিন্তু সুন্দর একটা সত্যকে আপনি ভালো ছাত্র বা ছাত্রী হয়ে ওঠার চেষ্টা করার আগে বুঝে নিতে পারেন।&lt;/p&gt;
+&lt;p&gt;এই ব্লগ পোস্টে সেই সত্যটাকেই আমরা বুঝে নিতে চেষ্টা করবো।&lt;/p&gt;
+&lt;div style="padding-bottom: 30px;"&gt;&lt;/div&gt;
+&lt;h3&gt;কেন আপনি ভালো ছাত্র বা ছাত্রী হতে চান?&lt;/h3&gt;
+&lt;p&gt;ভালো ছাত্র বা ছাত্রী হয়ে ওঠার চেষ্টা করার আগে নিজেই আনি নিজেকে প্রশ্ন করুন - কেন আপনি কেন আপনি ভালো ছাত্র বা ছাত্রী হতে চান?&lt;/p&gt;
+&lt;p&gt;- why?&lt;/p&gt;
+&lt;p&gt;লক্ষ্য করে দেখবেন, এই why-র উত্তরে আপনি যা ভাবছেন বা লিখছেন, সেটা ভালো ছাত্র বা ছাত্রী হতে চাওয়া আর একজনের উত্তরের সঙ্গে মিলছে না! অথচ সব্বাই আপনারা ভালো ছাত্র বা ছাত্রী হতে চাইছেন।&lt;/p&gt;
+&lt;p&gt;অর্থাৎ, আপনার why-র উত্তর আপনাকে ভালো ছাত্র বা ছাত্রী হতে প্রেরণা দিতে পারে, কিন্তু তাতে সাফল্য আপনি পেতেও পারেন, পেতে নাও পারেন।&lt;/p&gt;
+&lt;div style="padding-bottom: 30px;"&gt;&lt;/div&gt;
+&lt;h3&gt;ভালো ছাত্র বা ছাত্রী হতে পারার শর্তটা তাহলে কি?&lt;/h3&gt;
+&lt;p&gt;লাখ টাকার প্রশ্ন এইটাই -&lt;/p&gt;
+&lt;p&gt;ভালো ছাত্র বা ছাত্রী হতে পারার শর্তটা কি?&lt;/p&gt;
+&lt;p&gt;এই প্রশ্নের উত্তর আছে মানব জীবনের একটা সহজ ও স্বাভাবিক ধর্মে - &lt;/p&gt;
+&lt;div style="padding-bottom: 10px;"&gt;&lt;/div&gt;
+&lt;blockquote&gt;জীবনের ধর্ম হ’ল - When we are able to accomplish something that we have set out to do, whether it's a personal goal or a task assigned to us, we often experience a sense of satisfaction, pride, and joy. This positive emotion can inspire us to seek out similar experiences in the future, as we have learned that the effort we put in can result in a rewarding outcome.&lt;/blockquote&gt;&lt;div style="padding-bottom: 10px;"&gt;&lt;/div&gt;&lt;p&gt;এই জীবনধর্মটাকেই ছাত্রছাত্রীদের ক্ষেত্রে প্রয়োগ হয় এইভাবে - When a student can successfully complete their class homework independently, they feel a sense of satisfaction, pride, and joy. This positive emotion can inspire them to seek out similar experiences in the future.&amp;nbsp;&lt;/p&gt;&lt;div style="padding-bottom: 10px;"&gt;&lt;/div&gt;
+&lt;p&gt;অর্থাৎ, ভালো ছাত্র বা ছাত্রী হতে পারার শর্তটা হ'ল - you have to develop your ability to successfully complete their class homework independently, they feel a sense of satisfaction, pride, and joy.&lt;/p&gt;
+&lt;div style="padding-bottom: 30px;"&gt;&lt;/div&gt;
+&lt;h3&gt;তাহলে ভাল ছাত্র বা ছাত্রী হতে হ'লে করতে কি হবে?&lt;/h3&gt; 
+&lt;p&gt;নিজের নিজের পড়াশুনোয় এই যে "পারার আনন্দ" (ability to successfully complete their class homework independently, they feel a sense of satisfaction, pride, and joy.)-এই যে আনন্দ এইটাই পড়াশোনায় ছাত্রছাত্রীদের আকর্ষণ করে।&lt;/p&gt;
+&lt;p&gt;আর, পড়াশোনার মধ্যে তা না-পারার যে বিরক্তি, গ্লানি ও পরাজয়বোধ - সেইটাই তাদের মনে পড়াশোনার প্রতি বিকর্ষণ তৈরি করে।&lt;/p&gt;
+&lt;p&gt;তাই, এককথায় ভালো ছাত্র বা ছাত্রী হওয়ার উপায় হ'ল - পড়াশোনার মধ্যে "পারার আনন্দ" উপভোগকে বাড়ানো ও "না-পারার বিরক্তি বা পরাজয় বোধ"-কে দূর করা।&lt;/p&gt;
+
+&lt;blockquote style="background-color: #e6f4ea; padding: 20px; border-left: 5px solid #81c784; border-radius: 6px; font-size: 16px; line-height: 1.6; margin: 20px 0;"&gt;
+  &lt;p&gt;&lt;strong&gt;এই অংশটি এই কনটেন্টের একটি এক্সক্লুসিভ অংশ ও শুধুমাত্র আমাদের নিবন্ধিত সদস্যদের জন্য সংরক্ষিত। নিরাপত্তাজনিত কারণে তা এখান থেকে সরিয়ে নেওয়া হয়েছে।&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;আমরা ইতিমধ্যে আমাদের সমস্ত সদস্যদের কাছে উক্ত এক্সক্লুসিভ অংশটির পিডিএফ সংস্করণ পাঠিয়ে দিয়েছি।&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;আপনি যদি সদ্য সদস্য হয়ে থাকেন এবং এখনও পিডিএফটি হাতে না পেয়ে থাকেন, দয়া করে আমাদের হোয়াটসঅ্যাপে যোগাযোগ করুন। আমরা যথাশীঘ্র সম্ভব সেটি আপনাকে পাঠিয়ে দেব।&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div style="padding-bottom: 10px;"&gt;&lt;/div&gt;
+
+&lt;p&gt;বলাটা সহজ, করাটা নয়।&lt;/p&gt;
+&lt;p&gt;তবে করাটাও সহজ করা যায়, সে নিয়ে এখানে নয়, পরে অন্যান্য লেখাগুলোয় তার আলোচনা হবে।&lt;/p&gt;
+
+
+
+&lt;!-- 5. WHATSAPP SUPPORT BOX --&gt;
+&lt;div style="margin-top: 50px; padding: 25px; background-color: #f7fafc; border-top: 3px solid #22c55e; border-radius: 8px; text-align: center;"&gt;
+  &lt;p style="font-size: 16px; color: #4a5568; margin-top: 0; margin-bottom: 25px;"&gt;কোনও সমস্যা হচ্ছে? কোনও প্রশ্ন আছে? হেল্প পেতে সরাসরি যোগাযোগ করতে চান? আমাদের সাপোর্ট টিমের সঙ্গে WhatsApp-এ সরাসরি যোগাযোগ করতে এই বোতামে ক্লিক করুন 👇&lt;/p&gt;
+  &lt;button onclick="var p='919647496123',m=encodeURIComponent('Re: Support'),a='whatsapp://send?phone='+p+'&text='+m,w='https://wa.me/'+p+'?text='+m;window.location.href=a;setTimeout(function(){window.open(w,'_blank')},1500);" onmouseout="this.style.backgroundColor='#22c55e'" onmouseover="this.style.backgroundColor='#16a34a'" style="background-color: #22c55e; color: white; padding: 12px 24px; border: none; border-radius: 9999px; cursor: pointer; font-size: 16px; font-weight: 600; display: inline-flex; align-items: center; transition: background-color 0.3s;"&gt;&lt;span style="margin-right: 8px; font-size: 20px; line-height: 1;"&gt;💬&lt;/span&gt; WhatsApp Support&lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- End of Support Content --&gt;
+&lt;/div&gt;</div>
+        
+        <button class="copy-btn" onclick="copyPrompt('mainPrompt', this)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+          <span>Copy HTML Code</span>
+        </button>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Siva Prasad Mukherjee. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function copyPrompt(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const originalContent = btn.innerHTML;
+        btn.innerHTML = `<span>Copied to Clipboard!</span>`;
+        btn.classList.add('copied');
+        
+        setTimeout(() => {
+          btn.innerHTML = originalContent;
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
