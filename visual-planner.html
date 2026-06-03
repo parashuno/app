@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlowForge 2.1 Production Blueprint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-gradient-start: #020617;
+      --bg-gradient-end: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.4);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --accent-primary: #22d3ee;
+      --accent-hover: #67e8f9;
+      --accent-success: #10b981;
+      --code-bg: rgba(0, 0, 0, 0.3);
+      --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      --input-bg: rgba(15, 23, 42, 0.6);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: fixed linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .sub-header {
+      color: var(--accent-primary);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .input-section {
+      margin-bottom: 40px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+      letter-spacing: 0.05em;
+    }
+
+    textarea {
+      background: var(--input-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      resize: vertical;
+      min-height: 150px;
+      transition: all 0.3s;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.1);
+    }
+
+    .prompt-workflow {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .step-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .step-label {
+      font-weight: 800;
+      font-size: 0.85rem;
+      background: var(--accent-primary);
+      color: #020617;
+      padding: 4px 14px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .prompt-content {
+      background: var(--code-bg);
+      padding: 25px;
+      border-radius: 12px;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      white-space: pre-wrap;
+      border: 1px solid rgba(255,255,255,0.05);
+      margin-bottom: 20px;
+      line-height: 1.5;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+
+    .prompt-content::-webkit-scrollbar { width: 8px; }
+    .prompt-content::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 4px; }
+
+    .copy-btn {
+      background: rgba(34, 211, 238, 0.1);
+      color: var(--accent-primary);
+      border: 1px solid var(--accent-primary);
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s;
+      width: 100%;
+    }
+
+    .copy-btn:hover {
+      background: var(--accent-primary);
+      color: #020617;
+    }
+
+    .copy-btn.copied {
+      background: var(--accent-success);
+      border-color: var(--accent-success);
+      color: white;
+    }
+
+    .footer {
+      margin-top: 80px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--card-border);
+      padding-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>FLOWFORGE 2.1 - PRODUCTION BLUEPRINT GENERATOR</h1>
+      <p class="sub-header">Visual Learning Design & Flow/Veo Production Planner</p>
+    </header>
+
+    <div class="input-section">
+      <div class="input-group">
+        <label>Paste Complete Script Here</label>
+        <textarea id="scriptInput" placeholder="Enter your full educational script..." oninput="updatePrompt()"></textarea>
+      </div>
+    </div>
+
+    <div class="prompt-workflow">
+      <div class="step-card">
+        <div class="step-header">
+          <span class="step-label">Production Planner Prompt</span>
+        </div>
+        <div class="prompt-content" id="finalPrompt">Loading template...</div>
+        <button class="copy-btn" onclick="copyText('finalPrompt', this)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+          <span>Copy Complete Prompt</span>
+        </button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Siva Prasad Mukherjee. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    const template = `ROLE
+
+Act as a Visual Learning Designer and Flow/Veo Production Planner.
+
+Your job is to convert a completed educational script into a detailed scene-by-scene production blueprint that can be used directly inside Google Flow and Veo.
+
+PRIMARY OBJECTIVE
+
+Create a complete visual production plan that:
+
+* Covers the entire script
+* Preserves educational meaning
+* Maximizes learner understanding
+* Produces Flow-compatible Veo prompts
+* Supports Flow's "Add Clip to Prompt" workflow
+
+SCENE SEGMENTATION RULES
+
+Treat every sentence, clause, or standalone idea as a separate learning unit.
+
+Rules:
+
+* Do not skip any content.
+* Do not summarize content.
+* Do not merge unrelated ideas.
+* If a sentence contains multiple educational ideas, split it into multiple scenes.
+* The final blueprint must cover the entire script from beginning to end.
+
+LEARNING-FIRST RULE
+
+Educational clarity is more important than sentence count.
+
+If a concept requires multiple visual steps for understanding:
+
+* Create multiple scenes.
+* Break complex processes into smaller visual units.
+* Prefer learning effectiveness over strict sentence matching.
+
+VISUAL TYPE RULES
+
+Use a balanced mix of:
+
+* Host on Camera
+* Screen Recording
+* Text Overlay
+* Graphics
+* Stock Footage
+* AI-Generated Visuals
+
+Usage Guidelines:
+
+Host on Camera:
+
+* Hooks
+* Major explanations
+* Emotional emphasis
+* Transitions
+* Summaries
+
+Screen Recording:
+
+* Software
+* Websites
+* Research
+* Studies
+* Data demonstrations
+
+Text Overlay:
+
+* Statistics
+* Definitions
+* Key statements
+* Important takeaways
+
+Graphics:
+
+* Processes
+* Mechanisms
+* Comparisons
+* Systems
+* Scientific explanations
+
+Stock Footage:
+
+* Real-world examples
+* Human behavior
+* Emotional context
+* Everyday situations
+
+AI Visuals:
+
+* Abstract concepts
+* Internal processes
+* Invisible mechanisms
+* Metaphors
+* Scientific visualizations
+
+VARIETY RULE
+
+Avoid using the same visual type more than two scenes consecutively whenever practical.
+
+CONTINUITY RULE
+
+Assume every scene will be generated using:
+
+Google Flow
++
+Veo
++
+Add Clip to Prompt
+
+Therefore:
+
+Every Veo prompt must include continuity guidance.
+
+Maintain:
+
+* Same environment when appropriate
+* Same presenter when applicable
+* Same visual style
+* Same educational atmosphere
+* Same subject focus
+* Smooth progression from previous clip
+
+FLOW/VEO PROMPT RULES
+
+Every scene must include a production-ready Veo prompt.
+
+The Veo prompt must:
+
+* Be written entirely in English
+* Be ready for direct use in Flow
+* Support Add Clip to Prompt continuity
+* Describe only what should be visible
+* Avoid narration text
+* Avoid camera instructions unless necessary
+* Avoid baked-in text
+* Avoid logos
+* Avoid watermarks
+
+STORY FLOW RULE
+
+Each scene should:
+
+* Advance understanding
+* Build naturally from the previous scene
+* Support the learner's mental model
+* Directly represent the learning unit
+
+OUTPUT FORMAT
+
+Return ONLY a table.
+
+Columns:
+
+| Scene # |
+| Learning Unit |
+| Visual Type |
+| Detailed Visual Description |
+| On-Screen Text |
+| Educational Purpose |
+| Flow/Veo Prompt |
+
+SCRIPT:
+
+[PASTE COMPLETE SCRIPT HERE]`;
+
+    function updatePrompt() {
+      const scriptVal = document.getElementById('scriptInput').value || "[PASTE COMPLETE SCRIPT HERE]";
+      const updated = template.replace('[PASTE COMPLETE SCRIPT HERE]', scriptVal);
+      document.getElementById('finalPrompt').innerText = updated;
+    }
+
+    function copyText(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const originalContent = btn.innerHTML;
+        btn.innerHTML = `<span>Copied to Clipboard!</span>`;
+        btn.classList.add('copied');
+        
+        setTimeout(() => {
+          btn.innerHTML = originalContent;
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+
+    // Initialize display
+    updatePrompt();
+  </script>
+</body>
+</html>
